@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Pancreatic Cancer Prediction</title>
+   </head>
+   <body>
+      <h1>Pancreatic Cancer Prediction</h1>
+      <form action="/predict" method="post">
+         <label for="age">Age:</label>
+         <input type="number" id="age" name="age" required><br><br>
+         <label for="sex">Sex:</label>
+         <select id="sex" name="sex">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+         </select><br><br>
+         <label for="PLasama_CA19_9">PLasama_CA19_9:</label>
+         <input type="number" id="PLasama_CA19_9" name="PLasama_CA19_9" required><br><br>
+         <label for="Creatine">Creatine:</label>
+         <input type="number" id="Creatine" name="Creatine" required><br><br>
+         <label for="LYVE1">LYVE1:</label>
+         <input type="number" id="LYVE1" name="LYVE1" required><br><br>
+         <label for="REG18">REG18:</label>
+         <input type="number" id="REG18" name="REG18" required><br><br>
+         <label for="TFF1">TFF1:</label>
+         <input type="number" id="TFF1" name="TFF1" required><br><br>
+         <label for="REG1A">REG1A:</label>
+         <input type="number" id="REG1A" name="REG1A" required><br><br>
+         <label for="FM">F/M:</label>
+         <select id="FM" name="FM">
+            <option value="1">F</option>
+            <option value="0">M</option>
+         </select><br><br>
+         <input type="submit" value="Predict">
+      </form>
+      <br>
+      {% if result %}
+        <div>Result: {{ result }}</div>
+      {% endif %}
+      {% if error_msg %}
+        <div style="color: red;">{{ error_msg }}</div>
+      {% endif %}
+   </body>
+</html>
