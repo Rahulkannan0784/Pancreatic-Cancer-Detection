@@ -10,7 +10,7 @@ The dataset used for this project contains information related to pancreatic can
 
 ## Requirements
 
-- Python (version x.x.x)
+- Python
 - Libraries and dependencies (e.g., scikit-learn, pandas, numpy)
 
 ## Usage
